@@ -1,0 +1,15 @@
+# Use the official PHP image as the base image
+FROM php:latest
+
+# Copy the PHP file into the container
+COPY index.php /var/www/html/
+
+# Set the working directory
+WORKDIR /var/www/html/
+
+# Expose port 80
+EXPOSE 80
+
+# Command to run the PHP file
+CMD ["php", "-S", "0.0.0.0:80"]
+
